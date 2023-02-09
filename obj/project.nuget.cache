@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MDfz7/7Bx2XKG5TdQz5dpElEZxM+HXm63Q8NBbuPKI1cEcA7QUiiJ5oLi325P/R6sKe5QkMRW+1Jbt2fjyywTA==",
+  "dgSpecHash": "kxOvNWv/m3isDkXt+CgG40INiwhHHoF4/oTXp2FG3JzfuHA/DouEyvv5cZHG6Yci3CE+MaGnP5WN63VsEDkPXw==",
   "success": true,
-  "projectFilePath": "D:\\LanchesBotelho\\LanchesBotelho.csproj",
+  "projectFilePath": "D:\\.NET\\LanchesBotelho\\app\\LanchesBotelho.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Botelho\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Alex Botelho\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

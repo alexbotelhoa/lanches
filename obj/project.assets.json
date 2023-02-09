@@ -3468,11 +3468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LanchesBotelho\\LanchesBotelho.csproj",
+      "projectUniqueName": "D:\\.NET\\LanchesBotelho\\app\\LanchesBotelho.csproj",
       "projectName": "LanchesBotelho",
-      "projectPath": "D:\\LanchesBotelho\\LanchesBotelho.csproj",
+      "projectPath": "D:\\.NET\\LanchesBotelho\\app\\LanchesBotelho.csproj",
       "packagesPath": "C:\\Users\\Alex Botelho\\.nuget\\packages\\",
-      "outputPath": "D:\\LanchesBotelho\\obj\\",
+      "outputPath": "D:\\.NET\\LanchesBotelho\\app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex Botelho\\AppData\\Roaming\\NuGet\\NuGet.Config",

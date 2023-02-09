@@ -1,12 +1,13 @@
-﻿using LanchesMac.Models;
+﻿using LanchesBotelho.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace LanchesMac.Context
+namespace LanchesBotelho.Context
 {
-    public class AppDbContext : DbContext
-    {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+  public class AppDbContext : DbContext
+  {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Category> Categories { get; set; }
-    }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Snack> Snacks { get; set; }
+  }
 }
