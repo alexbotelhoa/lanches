@@ -15,6 +15,7 @@ namespace LanchesBotelho.Controllers
 
         public IActionResult Index()
         {
+            TempData["Name"] = "Macoratti"; 
             return View();
         }
 

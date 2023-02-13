@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using LanchesBotelho.Repositories;
+using LanchesBotelho.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -24,8 +25,14 @@ namespace LanchesBotelho.Controllers
 
         public IActionResult List()
         {
-            var snack = _snackRepository.Snacks;
-            return View(snack);
+            /*            var snack = _snackRepository.Snacks;
+                        return View(snack);*/
+
+            var snacksListViewModel = new SnackListViewModel();
+            snacksListViewModel.Snacks = _snackRepository.Snacks;
+            snacksListViewModel.CategoryActual = "Categoria Atual";
+
+            return View(snacksListViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
