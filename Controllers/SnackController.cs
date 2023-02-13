@@ -25,9 +25,6 @@ namespace LanchesBotelho.Controllers
 
         public IActionResult List()
         {
-            /*            var snack = _snackRepository.Snacks;
-                        return View(snack);*/
-
             var snacksListViewModel = new SnackListViewModel();
             snacksListViewModel.Snacks = _snackRepository.Snacks;
             snacksListViewModel.CategoryActual = "Categoria Atual";
