@@ -1,4 +1,6 @@
 ﻿using LanchesBotelho.Models;
+using LanchesBotelho.Repositories;
+using LanchesBotelho.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,28 +8,31 @@ namespace LanchesBotelho.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ISnackRepository _snackRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ISnackRepository snackRepository)
         {
-            _logger = logger;
+            _snackRepository = snackRepository;
         }
 
         public IActionResult Index()
         {
-            TempData["Name"] = "Macoratti"; 
-            return View();
+            var homeViewModel = new HomeViewModel
+            {
+                SnacksFavorite = _snackRepository.SnackFavorite
+            };
+            return View(homeViewModel);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None,
+            NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel
+            {
+                RequestId = Activity.Current?.Id
+                ?? HttpContext.TraceIdentifier
+            });
         }
     }
 }

@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\images\\Full-Cart-icon.png",
+      "PackagePath": "staticwebassets\\images\\Full-Cart-icon.png"
+    },
+    {
+      "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\images\\carousel11.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel11.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\images\\carousel12.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel12.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\images\\carousel13.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel13.jpg"
+    },
+    {
+      "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\images\\remove.ico",
+      "PackagePath": "staticwebassets\\images\\remove.ico"
+    },
+    {
       "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
