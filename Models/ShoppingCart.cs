@@ -12,7 +12,7 @@ namespace LanchesBotelho.Models
             _context = context; 
         }
 
-        public string Id { get; set; }
+        public string ShoppingCartId { get; set; }
         public List<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         public static ShoppingCart GetCart(IServiceProvider services)
@@ -23,7 +23,7 @@ namespace LanchesBotelho.Models
             session.SetString("cartId", cartId);
             return new ShoppingCart(context)
             {
-                Id = cartId
+                ShoppingCartId = cartId
             };
         }
 
@@ -31,13 +31,13 @@ namespace LanchesBotelho.Models
         {
             var ShoppingCartItem = _context.ShoppingCartItems.SingleOrDefault(
                 s => s.Snack.Id == snack.Id &&
-                s.ShoppingCartId == Id);
+                s.ShoppingCartId == ShoppingCartId);
 
             if(ShoppingCartItem == null)
             {
                 ShoppingCartItem = new ShoppingCartItem
                 {
-                    ShoppingCartId = Id,
+                    ShoppingCartId = ShoppingCartId,
                     Snack = snack,
                     Amount = 1
                 };
@@ -54,7 +54,7 @@ namespace LanchesBotelho.Models
         {
             var ShoppingCartItem = _context.ShoppingCartItems.SingleOrDefault(
                 s => s.Snack.Id == snack.Id &&
-                s.ShoppingCartId == Id);
+                s.ShoppingCartId == ShoppingCartId);
 
             var AmountLocal = 0;
 
@@ -78,20 +78,20 @@ namespace LanchesBotelho.Models
         {
             return ShoppingCartItems ?? (ShoppingCartItems =
                 _context.ShoppingCartItems
-                .Where(c => c.ShoppingCartId == Id)
+                .Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Include(s => s.Snack)
                 .ToList());
         }
 
         public void ClearCart()
         {
-            var cartItems = _context.ShoppingCartItems.Where(c => c.ShoppingCartId == Id);
+            var cartItems = _context.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId);
             _context.ShoppingCartItems.RemoveRange(cartItems);
         }
 
         public decimal GetShoppingCartTotal()
         {
-            var total = _context.ShoppingCartItems.Where(c => c.ShoppingCartId == Id).Select(c => c.Snack.Price * c.Amount).Sum();
+            var total = _context.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Select(c => c.Snack.Price * c.Amount).Sum();
             return total;
         }
     }

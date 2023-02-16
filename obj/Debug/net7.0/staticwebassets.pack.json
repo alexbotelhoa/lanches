@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\carousel13.jpg"
     },
     {
+      "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\images\\cart-5-16.ico",
+      "PackagePath": "staticwebassets\\images\\cart-5-16.ico"
+    },
+    {
       "Id": "D:\\.NET\\LanchesBotelho\\app\\wwwroot\\images\\remove.ico",
       "PackagePath": "staticwebassets\\images\\remove.ico"
     },

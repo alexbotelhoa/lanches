@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LanchesBotelho.Models
 {
+    [Table("ShoppingCartItems")]
     public class ShoppingCartItem
     {
         public int Id { get; set; }
